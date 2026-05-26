@@ -1,0 +1,18 @@
+services:
+    - type: web
+      name: telegram-html-bot
+      runtime: node
+      buildCommand: npm install
+      startCommand: node bot.cjs
+      envVars:
+        - key: TELEGRAM_BOT_TOKEN
+          sync: false
+        - key: SUPABASE_URL
+          sync: false
+        - key: SUPABASE_SERVICE_KEY
+          sync: false
+        - key: ADMIN_ID
+          sync: false
+        - key: SESSION_SECRET
+          sync: false
+  
