@@ -4,9 +4,11 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "start": "node bot.cjs",
     "build": "node ./build.mjs",
-    "start": "node --enable-source-maps ./dist/index.mjs",
-    "bot": "node ./bot.cjs"
+    "start:server": "node --enable-source-maps ./dist/index.mjs",
+    "bot": "node ./bot.cjs",
+    "dev": "node bot.cjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.106.1",
