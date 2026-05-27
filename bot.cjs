@@ -1767,7 +1767,7 @@ bot.action(/^(enable|disable)_(html|zip|js|css)$/, async (ctx) => {
 
 // File viewer route — fetches files from Telegram storage channel and serves
 // them with the correct Content-Type so HTML renders in browsers.
-app.get('/view/:userId/:fileName', async (req, res) => {
+app.get('/api/view/:userId/:fileName', async (req, res) => {
   const { userId, fileName } = req.params;
   const decodedName = decodeURIComponent(fileName);
 
