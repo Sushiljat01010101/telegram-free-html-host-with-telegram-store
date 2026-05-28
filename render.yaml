@@ -1,21 +1,18 @@
 services:
-  - type: web
-    name: telegram-html-host
-    runtime: node
-    plan: free
-    buildCommand: npm install
-    startCommand: node bot.cjs
-    healthCheckPath: /
-    envVars:
-      - key: TELEGRAM_BOT_TOKEN
-        sync: false
-      - key: TELEGRAM_STORAGE_CHANNEL_ID
-        sync: false
-      - key: ADMIN_ID
-        sync: false
-      - key: SUPABASE_URL
-        sync: false
-      - key: SUPABASE_SERVICE_KEY
-        sync: false
-      - key: NODE_ENV
-        value: production
+    - type: web
+      name: telegram-html-bot
+      runtime: node
+      buildCommand: npm install
+      startCommand: node bot.cjs
+      envVars:
+        - key: TELEGRAM_BOT_TOKEN
+          sync: false
+        - key: SUPABASE_URL
+          sync: false
+        - key: SUPABASE_SERVICE_KEY
+          sync: false
+        - key: ADMIN_ID
+          sync: false
+        - key: SESSION_SECRET
+          sync: false
+  
